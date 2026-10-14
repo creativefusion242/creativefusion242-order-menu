@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f97316">
+  <title>CreativeFusion242 Snack Menu</title>
+  <style>
+    :root { --orange:#f97316; --ink:#202124; --muted:#666; --paper:#fffaf5; --line:#f1dfcf; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family:Arial, Helvetica, sans-serif; color:var(--ink); background:var(--paper); }
+    header { background:linear-gradient(135deg,#f97316,#fb923c); color:#fff; text-align:center; padding:32px 16px 28px; }
+    header h1 { margin:0 0 8px; font-size:clamp(1.8rem,5vw,2.6rem); }
+    header p { margin:0; font-size:1rem; }
+    main { max-width:900px; margin:24px auto; padding:0 16px 36px; }
+    .intro { text-align:center; color:var(--muted); margin:0 0 22px; }
+    .category { background:#fff; border:1px solid var(--line); border-radius:14px; margin:0 0 18px; overflow:hidden; box-shadow:0 3px 12px #7c2d1210; }
+    .category h2 { background:#fff0e3; margin:0; padding:14px 16px; font-size:1.15rem; }
+    .menu-list { list-style:none; padding:0; margin:0; }
+    .menu-list li { display:flex; justify-content:space-between; align-items:flex-start; gap:16px; padding:12px 16px; border-top:1px solid #f5eee8; }
+    .item-name { line-height:1.35; }
+    .price { white-space:nowrap; font-weight:700; color:#c2410c; }
+    .flavors { color:var(--muted); font-size:.92rem; padding:12px 16px 15px; line-height:1.8; border-top:1px solid #f5eee8; }
+    .flavors strong { color:var(--ink); }
+    .note { background:#fff; border:1px dashed #fdba74; padding:14px 16px; border-radius:12px; text-align:center; }
+    footer { text-align:center; padding:20px 16px; color:var(--muted); font-size:.85rem; }
+    @media (min-width:680px) { .columns { display:grid; grid-template-columns:1fr 1fr; gap:18px; align-items:start; } .columns .category { margin-bottom:0; } }
+    @media print { body { background:#fff; } header { background:#fff; color:#000; border-bottom:2px solid #222; } .category { box-shadow:none; break-inside:avoid; } }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Snack Menu</h1>
+    <p>CreativeFusion242 · Prices in BSD</p>
+  </header>
+  <main>
+    <p class="intro">Choose from our snacks, frozen treats, drinks, and combos.</p>
+    <div class="columns">
+      <section class="category">
+        <h2>Hot Food &amp; Combos</h2>
+        <ul class="menu-list">
+          <li><span class="item-name">Hot dog</span><span class="price">$4.00</span></li>
+          <li><span class="item-name">Hot dog + chips + soda combo</span><span class="price">$6.00</span></li>
+          <li><span class="item-name">Hot dog + popcorn + soda combo</span><span class="price">$7.50</span></li>
+        </ul>
+        <div class="flavors"><strong>Condiments:</strong> Ketchup · Mustard · Relish</div>
+      </section>
+
+      <section class="category">
+        <h2>Shaved Ice</h2>
+        <ul class="menu-list">
+          <li><span class="item-name">Shaved ice</span><span class="price">$3.00 / $4.00</span></li>
+        </ul>
+        <div class="flavors"><strong>Flavors:</strong><br>Blue Raspberry · Wild Cherry · Strawberry Daiquiri · Pina Colada · Georgia Peach · Green Apple · Margarita</div>
+      </section>
+
+      <section class="category">
+        <h2>Ice Cream</h2>
+        <ul class="menu-list">
+          <li><span class="item-name">Ice cream cone</span><span class="price">$2.00 / $4.00</span></li>
+          <li><span class="item-name">Ice cream cup</span><span class="price">$2.00 / $3.50</span></li>
+        </ul>
+        <div class="flavors"><strong>Flavors:</strong><br>Butter Pecan · Vanilla · Strawberry · Chocolate</div>
+      </section>
+
+      <section class="category">
+        <h2>Popcorn</h2>
+        <ul class="menu-list">
+          <li><span class="item-name">Small popcorn</span><span class="price">$2.00</span></li>
+          <li><span class="item-name">Medium popcorn</span><span class="price">$4.00</span></li>
+        </ul>
+      </section>
+
+      <section class="category">
+        <h2>Chips</h2>
+        <ul class="menu-list">
+          <li><span class="item-name">Funyuns</span><span class="price">$1.00</span></li>
+          <li><span class="item-name">Doritos Cheese</span><span class="price">$1.00</span></li>
+          <li><span class="item-name">Spicy Cheetos</span><span class="price">$1.00</span></li>
+          <li><span class="item-name">Hot Fries</span><span class="price">$1.00</span></li>
+          <li><span class="item-name">Lays Sour Cream</span><span class="price">$1.00</span></li>
+          <li><span class="item-name">Lays BBQ</span><span class="price">$1.00</span></li>
+          <li><span class="item-name">Lays Potato Chips</span><span class="price">$1.00</span></li>
+        </ul>
+      </section>
+
+      <section class="category">
+        <h2>Drinks</h2>
+        <ul class="menu-list">
+          <li><span class="item-name">Sprite (bottle)</span><span class="price">$2.00</span></li>
+          <li><span class="item-name">Goombay (bottle)</span><span class="price">$2.00</span></li>
+          <li><span class="item-name">Fruit Champagne (bottle)</span><span class="price">$2.00</span></li>
+          <li><span class="item-name">Coke (bottle)</span><span class="price">$2.00</span></li>
+          <li><span class="item-name">Orange soda (bottle)</span><span class="price">$2.00</span></li>
+          <li><span class="item-name">Vita Malt</span><span class="price">$2.50</span></li>
+        </ul>
+      </section>
+    </div>
+    <p class="note">Please ask at the counter if you need help choosing your snack.</p>
+  </main>
+  <footer>CreativeFusion242 · Snack Menu</footer>
+</body>
+</html>
